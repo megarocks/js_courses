@@ -1,0 +1,11 @@
+.my {
+    float: left;
+    width: 25%;
+    margin: 7px;
+    border: solid orange 1px;
+    text-align: center;
+}
+
+.my span {
+    font-size: 32px;
+}
