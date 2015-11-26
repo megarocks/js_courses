@@ -6,7 +6,7 @@
 
 Материалы:
 
-7. Пошаговая инструкция по установке, настройке и спользованию приложения GitHub Desktop
+7. [Пошаговая инструкция по установке, настройке и спользованию приложения GitHub Desktop](https://github.com/megarocks/js_courses/blob/master/class_07/github-desktop-manual/README.md)
 7. [Обучалка в виде игры](https://try.github.io/levels/1/challenges/1)
 7. Настоятельно рекомендую почитать [гайд по использованию git flow] (https://guides.github.com/introduction/flow/)
 
