@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    
+</head>
+<body>
+	<div>
+		<script type="text/javascript">
+		
+		var cat = {
+			name: 'Sonya', 
+			color: 'spot grey', 
+			age: '2',
+			oSebe: function(){
+			console.log('Меня зовут ' + this.name + ', цвет ' + this.color + ', мне ' + this.age + ' года!');
+			},
+			talk1: function(){
+			console.log('Я сказалa мяу 10 раз!');
+			},
+			talk2: function (miu){
+				var miu = prompt('сколько раз мы хотим чтобы он мяукнул?');
+				for(var i = 1; i<=miu; i++ ){
+					console.log('Я сказалa мяу ' + i + ' раз!');
+				}
+			},
+			pushistost: ['лысый', 'шерстка есть', 'средней пушистоти', 'норм пушистый', 'суперпушистый'],
+			oSebe2: function(){
+			console.log('Меня зовут ' + this.name + ', цвет ' + this.color + ', мне ' + this.age + ' года!' + ' Я ' + this.pushistost[3]);
+			},
+			LastTimeEat: null;
+			HowAreYou: ['голодный', 'неголодный'],
+			eat
+		};
+
+		cat.oSebe();
+		cat.talk1();
+		cat.talk2();
+		cat.oSebe2();
+
+
+
+		
+
+		</script>
+	</div>
+</body>
+</html>
