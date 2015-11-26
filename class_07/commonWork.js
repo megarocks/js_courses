@@ -1,3 +1,7 @@
-/**
- * Created by alt on 11/26/15.
- */
+setTimeout(function () {
+
+    var vitalyRow = document.getElementById('vitaly-kiktiov-row');
+
+    vitalyRow.className += ' success';
+
+}, 8888);
