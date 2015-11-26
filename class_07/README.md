@@ -11,27 +11,66 @@
 
 ## Установка и настройка
 
-7. [Качаем клиент для GitHub](https://desktop.github.com/). Устанавливаем
-7. Запускаем приложение
-7. Используем данные своей учетной записи для входа
-7. В списке репозиториев выбираем js_courses
-7. Клонируем репозиторий на компьютер
-7. Сразу после клонирования создаём "ветку" для своих изменений (ответвляемся от основного кода)
+* [Качаем клиент для GitHub](https://desktop.github.com/). Устанавливаем
+* Запускаем приложение
+* Используем данные своей учетной записи для входа
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/01.png)
+
+* Клонируем репозиторий на компьютер
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/19.png)
+
+* Сразу после клонирования создаём "ветку" для своих изменений (ответвляемся от основного кода)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/04.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/05.png)
 
 ## Регулярное использование
 
-7. Синхронизируемся с основной веткой (забираем самые последние изменения из репозитория)
-7. Вносим изменения в код (выполняем поставленные задачи)
-7. "коммитим" изменения. Каждый коммит должен описание выполненной работы.
-7. "пушим" изменения в репозиторий (публикуем)
-7. создаём "пул реквест". Считайте Pull Request - это заявление типа: "Я считаю что задача выполнена. Готов обсудить"
-7. По ссылке на Pull Request можно следить за всеми обновлениями: комментариями, замечаниями, обсуждениями и т.д.
-7. если нужно будет что-то исправить, то:
+* Синхронизируемся с основной веткой (забираем самые последние изменения из репозитория)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/20.png)
+
+* Вносим изменения в код (выполняем поставленные задачи)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/09.png)
+
+* "коммитим" изменения. Каждый коммит должен описание выполненной работы.
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/06.png)
+
+* "пушим" изменения в репозиторий (публикуем)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/07.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/08.png)
+
+* создаём "пул реквест". Считайте Pull Request - это заявление типа: "Я считаю что задача выполнена. Готов обсудить"
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/11.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/12.png)
+
+* По ссылке на Pull Request можно следить за всеми обновлениями: комментариями, замечаниями, обсуждениями и т.д.
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/13.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/14.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/15.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/16.png)
+
+![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/17.png)
+
+* если нужно будет что-то исправить, то:
   8. выполняем исправления
   8. коммитим изменённые файлы
   8. жмём Sync (пушим изменения)
-7. новые коммиты автоматически попадут в pull request
-7. когда проверяющий принял вашу работу, pull request "вливается" (мёржится) в ветку с основным кодом. Ура! Вы внесли
+* новые коммиты автоматически попадут в pull request
+* когда проверяющий принял вашу работу, pull request "вливается" (мёржится) в ветку с основным кодом. Ура! Вы внесли
 свою вклад в работу над проектом
 
 
