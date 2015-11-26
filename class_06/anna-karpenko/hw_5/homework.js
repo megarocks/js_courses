@@ -1,4 +1,4 @@
- var date;
+﻿ var date;
  var dateArray = [];
  function putIntoArray() { 
  	date = document.getElementsByTagName('input')[0].value;
@@ -26,4 +26,3 @@ function showMaxAndMinDate() {
 	}
 	document.getElementsByTagName('p')[0].innerHTML = "Наибольшая дата: " + maxDate;
 	document.getElementsByTagName('p')[1].innerHTML = "Наименьшая дата: " + minDate;
-}
