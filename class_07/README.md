@@ -1,79 +1,59 @@
 # Совместная разработка. Контроль версий
 
+## Материалы
+
 Для совместной работы воспользуемся системой контроля версий - git, и основаном на ней сервисе - GitHub.
-Приложение для работы с этой системой можно скачать [здесь](https://desktop.github.com/) (это для Mac и Windows)
+
+Материалы:
+
+7. [Пошаговая инструкция по установке, настройке и спользованию приложения GitHub Desktop](https://github.com/megarocks/js_courses/blob/master/class_07/github-desktop-manual/README.md)
+7. [Обучалка в виде игры](https://try.github.io/levels/1/challenges/1)
+7. Настоятельно рекомендую почитать [гайд по использованию git flow] (https://guides.github.com/introduction/flow/)
+
 Консольное приложение для разных операционных систем доступно [здесь](https://git-scm.com/downloads)
 
-Чтобы познакомиться с тем, как нескольким программистам совместно работать над одним проектом - [можно поиграть
-в игру](https://try.github.io/levels/1/challenges/1) на оффициальном сайте.
+## Задачи
 
-Настоятельно рекомендую почитать [вот это] (https://guides.github.com/introduction/flow/)
+### Установка, настройка и практика работы с gitHub
 
-# Использование
+7. Установить и настроить приложение
+7. Клонировать на рабочий компьютер репозиторий проекта с курсами
+7. Создать собственную ветку (branch). Назвать латинскими буквами по имени и фамилии
+7. В папке предидущего занятия создать подпапку (назовите по имени). В этой папке разместите свои наработки по задаче с 
+датами, автомобилем и котейками.
+7. Закоммититьте каждую задачу отдельным коммитом. В коммите описать что было сделано по задаче
+7. Запушить (залить/опубликовать) свои изменения (все коммиты)
+7. Создать пул реквест. Повесить пул реквест на `megarocks`
+7. Ждать комментариев и быть готовыми обьяснить код и/или внести правки
+7. Закоммитить и запушить правки
+7. Ждать комментариев...
+7. Если работа прошла приёмку - пул реквест будет закрыт
+7. Спасибо
 
-## Установка и настройка
 
-* [Качаем клиент для GitHub](https://desktop.github.com/). Устанавливаем
-* Запускаем приложение
-* Используем данные своей учетной записи для входа
+### Задачи на покодить
 
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/01.png)
+7. Обновите проект
+7. К вам попадут новые файлы `commonWork.js` и `index.html`
+7. В файле index.html добавьте в таблицу строку со своим данными (посмотрите по примеру той что там уже есть)
+дайте строке уникальный id
+7. в файле commonWork.js напишите код который:
+  8. спустя 8 секунд после запуска скрипта
+  8. по id найдёт строку с вашими данными
+  8. добавит этой строке класс `success`. Используйте как-то так: `myElement.className += ' success';`
+7. Проверьте что всё работает. Строка должна зеленеть
+7. Синхронизируйте проект 
+7. Закоммиттьте и запуште изменения
+7. Создайте пул-реквест
+7. Если потребуется - доведите работу до принятия
+7. Спасибо
 
-* Клонируем репозиторий на компьютер
+### Дополнительные задачи
 
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/19.png)
+7. Находите свою строку не по id. Выбрав все строки из таблицы и проверив контет каждой найдите ту - которая с вашими данными
+Вот её и подсветите. 
 
-* Сразу после клонирования создаём "ветку" для своих изменений (ответвляемся от основного кода)
 
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/04.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/05.png)
-
-## Регулярное использование
-
-* Синхронизируемся с основной веткой (забираем самые последние изменения из репозитория)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/20.png)
-
-* Вносим изменения в код (выполняем поставленные задачи)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/09.png)
-
-* "коммитим" изменения. Каждый коммит должен описание выполненной работы.
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/06.png)
-
-* "пушим" изменения в репозиторий (публикуем)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/07.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/08.png)
-
-* создаём "пул реквест". Считайте Pull Request - это заявление типа: "Я считаю что задача выполнена. Готов обсудить"
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/11.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/12.png)
-
-* По ссылке на Pull Request можно следить за всеми обновлениями: комментариями, замечаниями, обсуждениями и т.д.
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/13.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/14.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/15.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/16.png)
-
-![ololo](https://raw.githubusercontent.com/megarocks/js_courses/master/class_07/kiktiov_vitaly/screenshots/17.png)
-
-* если нужно будет что-то исправить, то:
-  8. выполняем исправления
-  8. коммитим изменённые файлы
-  8. жмём Sync (пушим изменения)
-* новые коммиты автоматически попадут в pull request
-* когда проверяющий принял вашу работу, pull request "вливается" (мёржится) в ветку с основным кодом. Ура! Вы внесли
-свою вклад в работу над проектом
 
 
 
