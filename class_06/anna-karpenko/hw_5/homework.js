@@ -26,3 +26,5 @@ function showMaxAndMinDate() {
 	}
 	document.getElementsByTagName('p')[0].innerHTML = "Наибольшая дата: " + maxDate;
 	document.getElementsByTagName('p')[1].innerHTML = "Наименьшая дата: " + minDate;
+}
+console.log(123);
