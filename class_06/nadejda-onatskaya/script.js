@@ -21,8 +21,10 @@ var cat = {
 	color: "черного",
 	age: 2,
 	lastTimeIWasFeeded: null,
+	lastTimeIWasPlaying: null,
+	playingTimes: 0,
 	story: function(){
-			console.log("Мое имя " + this.name + ". Я " + this.color + " цвета. Мне " + this.age + " года. Моя пушистость оценивается как " + furArray[this.fur] )
+			console.log("Мое имя " + this.name + ". Я " + this.color + " цвета. Мне " + this.age + " года. Моя пушистость оценивается как " + furArray[this.fur] + ". Со мной играли " + this.playingTimes + " раз, последний раз был в " + this.lastTimeIWasPlaying)
 		},
 	tolk: function(timesTolk){
 			for (var i = 0; i<timesTolk; i++){
@@ -40,7 +42,11 @@ var cat = {
 			else if((new Date - this.lastTimeIWasFeeded)/1000 < 30){
 				console.log("Не хочу кушать, еще не успел проголодаться")
 			}
-	}
+	},
+	play: function(){
+			this.lastTimeIWasPlaying = new Date();
+			this.playingTimes += 1;
+		}
 
 };
 
