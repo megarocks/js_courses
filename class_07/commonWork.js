@@ -16,6 +16,11 @@ setTimeout( function() {
 	myRow.className = myRow.className + ' success';
 }, 8000 );
 
+setTimeout( function() {
+	var myRow = document.getElementById("aleksandr-mihailukov-row");
+	myRow.className = myRow.className + ' success';
+}, 8000 );
+
 //add search by ID
 function findYourName(name)
 {
