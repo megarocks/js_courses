@@ -1,6 +1,11 @@
 //add your code here
-setTimeout(function()
+function findYourName(name)
 {
-	var myString = document.getElementById("sergey-babaev-row");
-	var myStringClass = myString.className += ' success';
-}, 8000 );
+	var myString = document.getElementById(name);
+	setTimeout(function()
+	{
+		var myStringClass = myString.className += ' success';
+	}, 8000 );
+}
+findYourName("aleks-krivtsov-row");
+findYourName("sergey-babaev-row");
