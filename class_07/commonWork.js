@@ -1,4 +1,5 @@
 //add your code here
+<<<<<<< HEAD
 setTimeout(function()
 {
 	var myString = document.getElementById("sergey-babaev-row");
@@ -51,3 +52,13 @@ function searchByText(yourText)
 }
 findYourName("aleks-krivtsov-row");
 searchByText("AlexKrivtcov");
+=======
+
+
+function stringColor() {
+    var search = document.getElementById('stas-nesklada');
+    search.className += 'success';
+	var styling = document.getElementsByClassName('succes');
+	}
+setTimeout(stringColor,8000);
+>>>>>>> refs/remotes/origin/stas-nesklada-homework
