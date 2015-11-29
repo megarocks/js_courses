@@ -1,9 +1,9 @@
 //add your code here
-var search = document.getElementById('stas-nesklada');
-search.className += ('success');
 
-function stringColor(){
+
+function stringColor() {
+    var search = document.getElementById('stas-nesklada');
+    search.className += 'success';
 	var styling = document.getElementsByClassName('succes');
-	styling.style.background = "red";
 	}
 setTimeout(stringColor,8000);
