@@ -8,7 +8,7 @@ setInterval(function()
 	var onatskayaString = document.getElementsByTagName("tr");
 	for(var i = 0; i <= (onatskayaString.length - 1); i++){
 		var trContent = onatskayaString[i].innerText;
-		if( trContent.indexOf("Nadejda") > -1) {
+		if( (trContent.indexOf("Nadejda") > -1) == true) {
 			onatskayaString.className += ' success';
 		}
 	}
