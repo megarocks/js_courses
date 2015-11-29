@@ -1,3 +1,2 @@
-# Материалы к занятиям по курсу JavaScript
-
-## 
+# js_courses
+babaev 
