@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working With DOM</title>
+</head>
+<body>
+
+<p id="example-p">
+    it is content of example p
+</p>
+
+<input type="submit" value="Do something with example-p" onclick="doSomethingWithP()">
+
+<hr>
+
+<div id="example-div">
+    it is content of example div
+</div>
+
+<input type="submit" value="Do something with example-div" onclick="doSomethingWithDiv()">
+
+<hr>
+
+<label for="example-input"></label>
+<input id="example-input" type="text">
+
+<input type="submit" value="Do something with example-input" onclick="doSomethingWithInput()">
+
+
+
+
+<button onclick="doReset()">Reset</button>
+
+
+
+<hr>
+
+<select id="example select" onchange="handSelectChange()">
+    <option value="orange">Orange</option>
+    <option value="green">Green</option>
+    <option value="black">Black</option>
+</select>
+
+<input type="submit" value="Do something with example-select" onclick="doSomethingWithSelect()">
+
+<hr>
+
+<ul id="example-ul">
+    <li>1</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>5</li>
+    <li>8</li>
+    <li>13</li>
+    <li>21</li>
+</ul>
+
+<input type="submit" value="Do something with example-ul" onclick="doSomethingWithUl()">
+
+<hr>
+
+<script src="domScript.js"></script>
+</body>
+</html>
