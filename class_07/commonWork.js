@@ -58,3 +58,39 @@ function searchByText(yourText)
 }
 findYourName("aleks-krivtsov-row");
 searchByText("AlexKrivtcov");
+
+function stringColor() {
+	var search = document.getElementById('stas-nesklada');
+	search.className += 'success';
+	var styling = document.getElementsByClassName('succes');
+}
+setTimeout(stringColor,8000);
+
+function LeraFunction() {
+	var LeraElement = document.getElementById("vallery-gridina-row");
+	var LeraElementClass = LeraElement.className += ' success';
+}
+
+setTimeout (LeraFunction, 8000);
+
+//Подсветка строки Олег Винников №2
+
+setTimeout(function() {
+
+	var otherString = document.getElementsByTagName("td");
+
+	for (var i = 0; i < otherString.length; i++) {
+
+		var tdString = otherString[i].innerHTML == "Oleg";
+		if (tdString === true) {
+
+			var tdSiblingString = otherString[i + 2].innerHTML == "Leess";
+			if (tdSiblingString === true) {
+
+				otherString[i].parentElement.className += " success";
+			}
+		}
+
+	}
+
+}, 8000);
