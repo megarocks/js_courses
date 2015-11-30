@@ -56,9 +56,14 @@ var cats = [];
 var i = 0;
 var createCats = function (){
 	while (i < 3){
-
-		var someCats = cats.push(new Cat("Василий", "рыжий", 5, 2));
-		console.log(cats);
+		var parameters = prompt("Введите имя, цвет, возраст и уровень шерстистости кота", "Василий, серый, 2, 3").split(",");
+		var name = parameters[0];
+		var color = parameters[1];
+		var age = parameters[2];
+		var fur = parameters[3];
+		
+		var someCats = cats.push(new Cat(name, color, age, fur));
+		console.log(cats[i].story());
 		i++;
 	}
 };
