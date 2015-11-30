@@ -1,15 +1,60 @@
 //add your code here
 setInterval(function()
 {
-	 var myString = document.getElementById("aleks-krivtsov-row");
+	var myString = document.getElementById("aleks-krivtsov-row");
 	var myStringClass = myString.className += ' success'; 
-	/* var onatskayaString = document.getElementById("nadejda-onatskaya-row");
-	onatskayaString.className += ' success'; */
-	var onatskayaString = document.getElementsByTagName("tr");
-	for(var i = 0; i <= (onatskayaString.length - 1); i++){
-		var trContent = onatskayaString[i].innerText;
-		if( (trContent.indexOf("Nadejda") > -1) == true) {
-			onatskayaString.className += ' success';
+	var myString = document.getElementById("sergey-babaev-row");
+	var myStringClass = myString.className += ' success';
+}, 8000 );
+setInterval(function() {
+	var onatskayaString = document.getElementById("nadejda-onatskaya-row");
+	onatskayaString.className += ' success'; 
+
+}, 8000 );
+
+/*setTimeout(function()
+{
+	var myString = document.getElementById("aleks-krivtsov-row");
+	var myStringClass = myString.className += ' success';
+}, 8000 );*/
+
+setTimeout( function() {
+	var myRow = document.getElementById("anna-karpenko-row");
+	myRow.className = myRow.className + ' success';
+}, 8000 );
+
+setTimeout( function() {
+	var myRow = document.getElementById("aleksandr-mihailukov-row");
+	myRow.className = myRow.className + ' success';
+}, 8000 );
+
+//add search by ID
+function findYourName(name)
+{
+	var myString = document.getElementById(name);
+	setTimeout(function()
+	{
+		myString.className += ' success';
+	}, 8000 );
+}
+//add search by text in tag
+function searchByText(yourText)
+{
+	setTimeout(function()
+	{
+		var arrayString = document.getElementsByTagName("tr");
+		for(var i = 0; i < arrayString.length; i++)
+		{
+			var arrayCell = arrayString[i].childNodes;
+			for( var j = 0; j <arrayCell.length; j++)
+			{
+				if(arrayCell[j].textContent == yourText)
+				{
+					arrayCell[j].parentNode.className += ' info';
+				}
+			}
 		}
-	}
-}, 2000 );
+	}, 11000);
+}
+findYourName("aleks-krivtsov-row");
+searchByText("AlexKrivtcov");
