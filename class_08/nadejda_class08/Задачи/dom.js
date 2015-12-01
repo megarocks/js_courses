@@ -1,27 +1,22 @@
 function getInputValues() {
-	var firstInputValue = document.getElementById("firstInput");
-	var secondInputValue = document.getElementById("secondInput");
+	var firstInputValue = document.getElementById("firstInput").value;
+	var secondInputValue = document.getElementById("secondInput").value;
 
-	if (firstInputValue != Number){
-		alert("You didn't write a number");
-	} else {
-		firstInputValue = parseInt(firstInputValue.innerText);
-		secondInputValue = parseInt(secondInputValue.innerText);
-		console.log("firstInputValue");
+	firstInputValue = parseInt(firstInputValue);
+	secondInputValue = parseInt(secondInputValue);
 
 		var inputValuesArray = [firstInputValue, secondInputValue]
 		return inputValuesArray
-	}
-};
+	};
 
 
 
 function compareInputValues() {
 	var inputValues = getInputValues();
 	if (inputValues[0] > inputValues[1]) {
-		console.log(inputValues[0]);
+		console.log("The first input number is bigger (", inputValues[0], ")");
 	} else if (inputValues[0] < inputValues[1]) {
-		console.log(inputValues[1]);
+		console.log("The second input number is bigger (", inputValues[1], ")");
 	} else {
 		console.log("The numbers are equal");
 	}
