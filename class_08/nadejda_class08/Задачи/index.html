@@ -3,24 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Class 08</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id = "inputs">
-		<input type="number" value="" id="firstInput">
+	<div id="wrapper">
+		<h1>Calculator</h1>
+		<div id = "inputs">
+			<div>
+				<input type="number" value="" id="firstInput" placeholder="value x">
 
-		<input type="number" value="" id= "secondInput">
+				<div id="selectAria">
+					<select id="operators" onchange = "calculateInputValues()">
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</div>
 
-		<button onclick="compareInputValues()"> Compare Values </button>
-		
-	</div>
-	<div id="selectAria">
+				<input type="number" value="" id= "secondInput" placeholder="value y">
+			</div>
+
+			<button onclick="compareInputValues()" class="btn btn-success"> Compare Values </button>
+			
+		</div>
+		<!-- <div id="selectAria">
 			<select id="operators" onchange = "calculateInputValues()">
 				<option value="+">+</option>
 				<option value="-">-</option>
 				<option value="*">*</option>
 				<option value="/">/</option>
 			</select>
+		</div> -->
+		<div id="resultsTable">
+			<button id="getResults" onclick="createResultsTable()">Get the results of Math operation</button>
 		</div>
+	</div>
 	<script type="text/javascript" src="dom.js"></script>
 </body>
 </html>

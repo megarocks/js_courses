@@ -1,0 +1,29 @@
+body{
+	background: #F1F4D2;
+}
+#wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+h1{
+	text-align: center;
+	text-transform: uppercase;
+}
+#selectAria{
+	display: inline-block;
+	margin: 0 10%;
+}
+#inputs > div{
+	width: 50%;
+	margin: auto;
+}
+#inputs button{
+	display: block;
+	margin: auto;
+}
+#inputs div {
+	text-align: center;
+}
+#inputs button{
+	margin: 7px auto;
+}

@@ -50,6 +50,34 @@ function calculateInputValues() {
 	}
 	var resultInfo = document.createElement('div');
 	resultInfo.innerText = "The result is: " + firstInputValue + selectValue + secondInputValue + " = " + result;
-	document.getElementById("selectAria").appendChild(resultInfo);
+	document.getElementById("inputs").appendChild(resultInfo);
+
 };
 
+function createResultsTable() {
+
+	firstInputValue = parseInt(document.getElementById("firstInput").value);
+	secondInputValue = parseInt(document.getElementById("secondInput").value);
+
+	var resultsTable = document.createElement("table");
+	resultsTable.border='1';
+	document.getElementById("resultsTable").appendChild(resultsTable);
+
+	var tableBody = document.createElement('tbody');
+    resultsTable.appendChild(tableBody);
+     
+    var tr = document.createElement('tr');
+    tableBody.appendChild(tr);
+
+    for (var i=0; i<4; i++){
+        var td = document.createElement('td');
+        td.width='150';
+        //td.appendChild(document.createTextNode("Ячейка"));
+        tr.appendChild(td);
+    }
+    /*var date = new Date;
+    document.getElementsByTagName('td').cellIndex[0].innerText = "Date";*/
+    /*var expression = firstInputValue + selectValue + secondInputValue;
+    var result*/
+}
+createResultsTable();
