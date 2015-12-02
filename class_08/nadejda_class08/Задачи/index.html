@@ -5,13 +5,22 @@
 	<title>Class 08</title>
 </head>
 <body>
-	<div>
+	<div id = "inputs">
 		<input type="number" value="" id="firstInput">
 
 		<input type="number" value="" id= "secondInput">
 
 		<button onclick="compareInputValues()"> Compare Values </button>
+		
 	</div>
+	<div id="selectAria">
+			<select id="operators" onchange = "calculateInputValues()">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+		</div>
 	<script type="text/javascript" src="dom.js"></script>
 </body>
 </html>
