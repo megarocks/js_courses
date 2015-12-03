@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+	<input id="ourX" type="text" placeholder="Value X">
+
+
+	<select id="chooseOperator" onchange="getOperator()">
+	    <option value="*">*</option>
+	    <option value="/">/</option>
+	    <option value="+">+</option>
+	    <option value="-">-</option>
+	</select>
+	
+	<input id="ourY" type="text" placeholder="Value Y"><br />
+
+	<button id="result" onclick="count()">Вычислить</button><br />
+
+	<button id="buttonMax" onclick="findMax()">Find max</button>
+	<button id="buttonMin" onclick="findMin()">Find min</button>
+	<button id="buttonSum" onclick="calcSum()">Calc sum</button>
+	<button id="buttonAvg" onclick="calcAvg()">Calc avg</button> <br />
+
+
+	<table align="center">
+		<tr>
+			<th>Date/Time</th>
+			<th>Expression</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td>Значение</td>
+			<td>Значение</td>
+			<td>Значение</td>
+		</tr>
+		<tr>
+			<td>Значение</td>
+			<td>Значение</td>
+			<td>Значение</td>
+		</tr>
+		<tr>
+			<td>Значение</td>
+			<td>Значение</td>
+			<td>Значение</td>
+		</tr>
+
+	</table>
+
+	
+
+
+
+		<script src="script.js"></script>
+</div>
+</body>
+</html>
