@@ -6,11 +6,10 @@ var results;
 //Получение значения из инпутов и селекта
 function getInputValues() {
 	
-	firstInputValue = parseInt(document.getElementById("firstInput").value);
-	secondInputValue = parseInt(document.getElementById("secondInput").value);
-	selectValue = document.getElementById("operators").value;
-
-	var inputValuesArray = {
+	firstInputValue =parseInt($('#firstInput').val());
+	secondInputValue = parseInt($('#secondInput').val());
+	selectValue = $("#operators").val();
+		var inputValuesArray = {
 		firstValue: firstInputValue,
 		secondValue:  secondInputValue,
 		operator: selectValue
@@ -103,7 +102,8 @@ function createResultsTable() {
 	}
 	
 	// Добавляем одну строку в таблицу при каждом вызове функции и заполняем ее данными (время операции, вычисляемое выражение, результат)
-    var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+    //var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+	var date = moment().format('LLLL');
 	var tr = document.createElement('tr');
 		tableBody.appendChild(tr);
 		for (var j=0; j<3; j++){
@@ -130,3 +130,11 @@ function createResultsTable() {
 /*function painTheBiggestValueRow() {
 
 }*/
+
+
+
+var myButton = $('#compare-values');
+myButton.click(compareInputValues);
+
+var myResultButton = $('#getResults');
+myResultButton.click(createResultsTable);
