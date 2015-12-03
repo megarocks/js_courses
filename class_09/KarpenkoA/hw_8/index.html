@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw_8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="input-menu">
+        <div class="form-group">
+            <input type="value" class="form-control" placeholder="Value X" id="value">
+        </div>
+        <div class="form-group">
+            <select class="form-control" id="sel1">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="value" class="form-control" placeholder="Value Y" id="value">
+        </div>
+    </div>
+    <div class="btn1">
+        <button type="button" class="btn btn-warning">Вычислить</button>
+    </div>
+    <div class="option-btn">
+        <button type="button" class="btn btn-warning">Find max</button>
+        <button type="button" class="btn btn-warning">Find min</button>
+        <button type="button" class="btn btn-warning">Calc sum</button>
+        <button type="button" class="btn btn-warning">Calc avg</button>
+    </div>
+    <table id="example" class="table table-striped table-bordered" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Date/Time</th>
+                <th>Expression</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    9
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="result">
+        <p>Sum of 5 expressions: </p>
+        <p>Average of 5 expressions: </p>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
