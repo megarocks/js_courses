@@ -1,10 +1,6 @@
 body{
 	background: #F1F4D2;
 }
-#wrapper{
-	width: 1000px;
-	margin: 0 auto;
-}
 h1{
 	text-align: center;
 	text-transform: uppercase;
@@ -26,4 +22,7 @@ h1{
 }
 #inputs button{
 	margin: 7px auto;
+}
+#getResults{
+	margin: 10px auto;
 }

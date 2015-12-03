@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper" class="container">
 		<h1>Calculator</h1>
 		<div id = "inputs">
 			<div>
@@ -28,17 +28,11 @@
 			<button onclick="compareInputValues()" class="btn btn-success"> Compare Values </button>
 			
 		</div>
-		<!-- <div id="selectAria">
-			<select id="operators" onchange = "calculateInputValues()">
-				<option value="+">+</option>
-				<option value="-">-</option>
-				<option value="*">*</option>
-				<option value="/">/</option>
-			</select>
-		</div> -->
+		
 		<div id="resultsTable">
 			<button id="getResults" onclick="createResultsTable()">Get the results of Math operation</button>
 		</div>
+		<!-- <button onclick="painTheBiggestValueRow()" class="btn btn-success">The row with the biggest result</button> -->
 	</div>
 	<script type="text/javascript" src="dom.js"></script>
 </body>
