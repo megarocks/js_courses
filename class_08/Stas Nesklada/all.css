@@ -1,0 +1,24 @@
+.sand{
+    display:inline-block;
+}
+.box{
+    text-align: center;
+}
+input[type="text"]{
+    border: 2px solid #000;
+    height: 40px;
+    text-align: center;
+}
+input[type="submit"]{
+    margin-top: 30px;
+    border: 2px solid #000;
+    background: #a9a7a7;
+    height: 30px;
+}
+.table{
+    margin-top: 30px;
+}
+td{
+    width: 150px;
+    border: 2px solid  #000;
+}
