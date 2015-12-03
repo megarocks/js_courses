@@ -6,9 +6,13 @@ var results;
 //Получение значения из инпутов и селекта
 function getInputValues() {
 	
-	firstInputValue = parseInt(document.getElementById("firstInput").value);
-	secondInputValue = parseInt(document.getElementById("secondInput").value);
-	selectValue = document.getElementById("operators").value;
+	firstInputValue = parseInt($("#firstInput").val());
+	//firstInputValue = parseInt(document.getElementById("firstInput").value); заменяем на jquery (предидушая строка)
+	secondInputValue = parseInt($("#secondInput").val());
+	//secondInputValue = parseInt(document.getElementById("secondInput").value); тоже изм
+	selectValue = $("#operators").val();
+	//selectValue = document.getElementById("operators").value;
+
 
 	var inputValuesArray = {
 		firstValue: firstInputValue,
@@ -103,7 +107,8 @@ function createResultsTable() {
 	}
 	
 	// Добавляем одну строку в таблицу при каждом вызове функции и заполняем ее данными (время операции, вычисляемое выражение, результат)
-    var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+   // var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+	  var date = moment().format('LLLL');
 	var tr = document.createElement('tr');
 		tableBody.appendChild(tr);
 		for (var j=0; j<3; j++){
@@ -130,3 +135,8 @@ function createResultsTable() {
 /*function painTheBiggestValueRow() {
 
 }*/
+var myButton = $('#compare-values');
+myButton.on('click',compareInputValues); 
+
+var myButton = $('#getResults');
+myButton.on('click',createResultsTable);
