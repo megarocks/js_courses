@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    var a = prompt('Put in number A');
+    var b = prompt('Put in number B');
+    var myArray = [];
+    if (a >= 1 && b <= 100 && a < b) {
+        for (a; a <= b; a++) {
+            document.write('Number - ' + a + '<br />');
+            var aInt = parseInt(a, 10);
+            myArray.push(aInt);
+        }
+    } else {
+        document.write('you put in wrong data');
+    }
+    document.write('My Array is - ', myArray, '<br>');
+
+    function sumSquareOfArray() {
+        var sumSquare = 0;
+        for (var i = 0; i < myArray.length; i++) {
+            sumSquare = sumSquare + (myArray[i] * myArray[i]);
+        }
+        document.write('My sumSquare is - ', sumSquare);
+    }
+    sumSquareOfArray();
+</script>
+</body>
+</html>
