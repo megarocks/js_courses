@@ -46,8 +46,13 @@ var resetInput = function () {
 function handleSelectChange() {
 
     var testSelect = document.getElementById('example-select');
-
     console.log('Select value changed', testSelect.value);
+
+    switch (testSelect.value) {
+        case ("/"):
+            console.log('case with / worked');
+            break;
+    }
 
 }
 
