@@ -3,12 +3,23 @@ var secondInputValue;
 var selectValue;
 var results;
 
+
+/*$('.btn').on('click', function() {
+	alert("Button clicked");
+});*/
+
+
+
 //Получение значения из инпутов и селекта
 function getInputValues() {
 	
-	firstInputValue = parseInt(document.getElementById("firstInput").value);
+	/*firstInputValue = parseInt(document.getElementById("firstInput").value);
 	secondInputValue = parseInt(document.getElementById("secondInput").value);
-	selectValue = document.getElementById("operators").value;
+	selectValue = document.getElementById("operators").value;*/
+
+	firstInputValue = parseInt($("#firstInput").val());
+	secondInputValue = parseInt($("#secondInput").val());
+	selectValue = $("#operators").val();
 
 	var inputValuesArray = {
 		firstValue: firstInputValue,
@@ -35,6 +46,7 @@ function compareInputValues() {
 	}
 };
 
+$('#compare-values').click(compareInputValues);
 // Функция, считающая введенное пользователем выражение (значения из инпутов и знак из селекта)
 function calculateInputValues() {
 	var inputValues = getInputValues();
@@ -103,7 +115,8 @@ function createResultsTable() {
 	}
 	
 	// Добавляем одну строку в таблицу при каждом вызове функции и заполняем ее данными (время операции, вычисляемое выражение, результат)
-    var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+    //var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+	var date = moment().format('LLLL');
 	var tr = document.createElement('tr');
 		tableBody.appendChild(tr);
 		for (var j=0; j<3; j++){
@@ -125,8 +138,10 @@ function createResultsTable() {
 	
     
 }
-
+$('#getResults').click(createResultsTable);
 // Функция покраски строки с наибольшим результатом
 /*function painTheBiggestValueRow() {
 
 }*/
+
+
