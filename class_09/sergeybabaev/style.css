@@ -1,0 +1,40 @@
+#wrapper {
+	text-align: center;
+}
+input {
+	border:2px;
+	border-color: #000;
+	border-style: solid;
+	padding: 0 0 0 3px;
+	width: 70px;
+	outline: none; 
+	margin: 5px;
+}
+select {
+	width: 50px;
+	
+}
+
+select, button {
+	border: 2px;
+	border-color: black;
+	border-style: solid;
+	border-radius: 4px;
+	outline: none; 
+	margin: 5px;
+}
+
+table {
+	margin: 5px auto;
+    width: 300px; 
+    border-collapse: collapse; 
+    width:322px;
+   }
+   
+td,th {
+    padding: 3px; 
+    border: 1px solid black; 
+   }
+th {
+    background: #ccc; 
+   }
