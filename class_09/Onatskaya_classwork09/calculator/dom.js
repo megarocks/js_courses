@@ -8,7 +8,7 @@ function getInputValues() {
 	
 	firstInputValue = parseInt(document.getElementById("firstInput").value);
 	secondInputValue = parseInt(document.getElementById("secondInput").value);
-	selectValue = document.getElementById("operators").value;
+	selectValue =  document.getElementById("operators").value;
 
 	var inputValuesArray = {
 		firstValue: firstInputValue,
@@ -122,8 +122,7 @@ function createResultsTable() {
 
 
 		}
-	
-    
+	 
 }
 
 // Функция покраски строки с наибольшим результатом
