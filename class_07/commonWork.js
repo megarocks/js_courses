@@ -1,5 +1,10 @@
 //add your code here
+<<<<<<< HEAD
+<<<<<<< HEAD
+setTimeout(function()
+=======
 setInterval(function()
+>>>>>>> origin/master
 {
 	var myString = document.getElementById("aleks-krivtsov-row");
 	var myStringClass = myString.className += ' success'; 
@@ -58,6 +63,18 @@ function searchByText(yourText)
 }
 findYourName("aleks-krivtsov-row");
 searchByText("AlexKrivtcov");
+<<<<<<< HEAD
+=======
+
+
+function stringColor() {
+    var search = document.getElementById('stas-nesklada');
+    search.className += 'success';
+	var styling = document.getElementsByClassName('succes');
+	}
+setTimeout(stringColor,8000);
+>>>>>>> refs/remotes/origin/stas-nesklada-homework
+=======
 
 function stringColor() {
 	var search = document.getElementById('stas-nesklada');
@@ -94,3 +111,4 @@ setTimeout(function() {
 	}
 
 }, 8000);
+>>>>>>> origin/master

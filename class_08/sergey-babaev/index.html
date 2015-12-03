@@ -20,20 +20,26 @@
 
 <input type="submit" value="Do something with example-div" onclick="doSomethingWithDiv()">
 
-
 <hr>
 
 <label for="example-input"></label>
 <input id="example-input" type="text">
 
 <input type="submit" value="Do something with example-input" onclick="doSomethingWithInput()">
-<button onclick="resetInput()">Reset</button>
+
+
+
+
+<button onclick="doReset()">Reset</button>
+
+
+
 <hr>
 
-<select id="example-select" onchange="handleSelectChange()">
-    <option value="/">/</option>
-    <option value="+">+</option>
-    <option value="-">-</option>
+<select id="example select" onchange="handSelectChange()">
+    <option value="orange">Orange</option>
+    <option value="green">Green</option>
+    <option value="black">Black</option>
 </select>
 
 <input type="submit" value="Do something with example-select" onclick="doSomethingWithSelect()">
