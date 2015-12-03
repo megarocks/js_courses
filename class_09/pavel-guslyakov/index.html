@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<script src="podcapotom.js"></script>
+
+<input id="x" size="38" placeholder="Введите первое число">
+<select id="znak" onchange="znakSelectChange()">
+    <option value="Выберите знак">Выберите знак</option>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="">/</option>
+</select>
+<input id="y" size="38" placeholder="Введите второе число">
+<input type="button" value=" Вычислить " onclick="plus()">
+<input type="button" value=" + " onclick="plus()">
+<input type="button" value=" - " onclick="minus()">
+<input type="button" value=" * " onclick="umn()">
+<input type="button" value=" / " onclick="del()">
+<input id="rezultat" size="38" placeholder="Здесь выведится результат операции" readonly>
+</body> 
+</hmtl>
