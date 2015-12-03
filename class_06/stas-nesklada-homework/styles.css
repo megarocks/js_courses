@@ -1,0 +1,15 @@
+.my-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my {
+    display: flex;
+    height: 250px;
+    border: solid 1px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
