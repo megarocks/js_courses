@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    
+</head>
+<body>
+	<div>
+		<script type="text/javascript">
+
+		/*
+		var k = prompt('Введите K - число больше, чем 1');
+		var n = prompt('Введите N - число меньше, чем 100');
+
+		if(k > 1 && n <= 100){
+			for(n; n > 0; n--){
+			document.write(k + '<br />');
+			}
+
+		} else{
+			document.write('Вы что-то не то ввели!');
+		}
+
+		var a = prompt('Введите число А, больше 1');
+		var b = prompt('Введите число В, больше А, но меньше 100');
+
+		document.write('Amount of numbers is ' + (b - a + 1) + '.<br />');
+
+		if(a >= 1 && b > a && b <= 100){
+			for(a;a<=b;a++){
+				document.write(a + '<br />');
+			}
+
+		} else{
+			document.write('Вы что-то не то ввели!');
+		}
+
+		var a = prompt('Put in A >= 1');
+		var b = prompt('Put in B <= 100');
+		var c = (b-1);
+		var amount = (b-a-1);
+
+		if(a >= 1 && c <= 100 && a < c){
+			for(c; a < c; c--){
+				document.write(c + '<br />');
+
+			}
+		} else{
+			document.write('you put in wrong data!');
+		}
+		document.write('Amount is - ' + amount + '<br />');
+
+		var price = prompt('Put in price of candy');
+		var i = 1;
+
+		for(i; i<100; i++){
+			document.write('Price of ' + i + ' candy(ies) is ' + (i*price) + '<br />');
+		}
+
+		var price = prompt('Put in price of candy');
+		var i = 0.1;
+
+		for(i; i<=100; i+=0.1){
+			document.write('Price of ' + i.toFixed(1) + ' candies is ' + (i*price).toFixed(4) + '<br />');
+		}
+
+		var price = prompt('Put in price of candy')
+		var i = 1;
+
+		for (i; i<=100; i+=0.2){
+			document.write('Total price of ' + i.toFixed(1) + ' candies is - ' + (i*price).toFixed(4) + '<br />');
+		}
+
+		var a = prompt('Put in number A');
+		var b = prompt('Put in number B');
+		var myArray = [];
+
+		if(a >= 1 && b <= 100 && a < b){
+			for(a; a <=b ; a++){
+				document.write('Number - ' +  a + '<br />');
+				var aInt = parseInt(a,10);
+				myArray.push(aInt);
+			}
+		} else {
+			document.write('you put in wrong data');
+		}
+
+		document.write('My Array is - ', myArray , '<br>');
+
+		
+		function summaOfArray() {
+ 			var sum = 0;
+			for (var i = 0; i < myArray.length; i++) {
+    			sum = sum + myArray[i];	
+  			}
+  			document.write('My summa is - ', sum);
+		}
+
+		summaOfArray();
+
+		var a = prompt('Put in number A');
+		var b = prompt('Put in number B');
+		var myArray = [];
+
+		if(a >= 1 && b <= 100 && a < b){
+			for(a; a <=b ; a++){
+				document.write('Number - ' +  a + '<br />');
+				var aInt = parseInt(a,10);
+				myArray.push(aInt);
+			}
+		} else {
+			document.write('you put in wrong data');
+		}
+
+		document.write('My Array is - ', myArray , '<br>');
+
+		
+		function multiOfArray() {
+ 			var multi = 1;
+			for (var i = 0; i < myArray.length; i++) {
+    			multi = multi * myArray[i];	
+  			}
+  			document.write('My multi is - ', multi);
+		}
+
+		multiOfArray();
+
+		var a = prompt('Put in number A');
+		var b = prompt('Put in number B');
+		var myArray = [];
+
+		if(a >= 1 && b <= 100 && a < b){
+			for(a; a <=b ; a++){
+				document.write('Number - ' +  a + '<br />');
+				var aInt = parseInt(a,10);
+				myArray.push(aInt);
+			}
+		} else {
+			document.write('you put in wrong data');
+		}
+
+		document.write('My Array is - ' + myArray + '<br>');
+
+		
+		function sumSquareOfArray() {
+ 			var sumSquare = 0;
+			for (var i = 0; i < myArray.length; i++) {
+    			sumSquare = sumSquare + (myArray[i] * myArray[i]);	
+  			}
+  			document.write('My sumSquare is - ' + sumSquare);
+		}
+
+		sumSquareOfArray();
+
+		var n = prompt('Vvedite celoe chislo');
+		var myArray = [];
+		if(n>0){
+			for(i=1; i<=n; i++){
+				nVeshestv = (1/i).toFixed(4);
+				document.write('veshestvennoe chislo - ' + nVeshestv + '<br />');
+				var nInt = parseFloat(nVeshestv);
+				myArray.push(nInt);
+			}
+		} else {
+			document.write('You put wrong data')
+		}
+		document.write('My Array is - ' + myArray + '<br>');
+		function SumVeshestv(){
+			var SumVeshestv = 0;
+			for(i=0; i<myArray.length; i++){
+				SumVeshestv = SumVeshestv + myArray[i];
+			}
+			document.write('My SumVeshestv is - ' + SumVeshestv);
+		}
+		SumVeshestv();
+
+*/		
+		var n = prompt('Vvedite celoe chislo');
+		myArray = [];
+		if (n>=1 && n<=10){
+			for(var i=0; i<=n; i++){
+				var nInt = parseInt(n);
+				var a = nInt+i;
+				var b = a*2;
+				myArray.push(b);
+			}
+		} else {
+			document.write('You put in wrong data');
+		}
+		document.write('my Number is - ' + n + '<br />');
+		document.write('my Array is - ' + myArray + '<br />'); 
+		function sum(){
+			var sum = 0;
+			for (var c=0; c<myArray.length; c++){
+				sum = sum + myArray[c];
+			}
+			document.write('my sum is - ' + sum + '<br />');
+		}
+		sum();
+
+
+
+
+
+
+
+
+		</script>
+	</div>
+</body>
+</html>
