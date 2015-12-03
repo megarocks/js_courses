@@ -1,6 +1,4 @@
-var sign;
-var x;
-var y;
+
 function getOperator() {
 	var takeOperator = document.getElementById('chooseOperator'); // Получаю сюда значение сэлэкта.
 	var sign = takeOperator.value; // Получаю непосредственно знак.
@@ -20,4 +18,4 @@ function count() {
 }
 
 
-console.log(x,sign,y);
+
