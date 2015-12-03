@@ -25,7 +25,13 @@ function Cat(name, color, age, fur) {
 	this.lastTimeIWasPlaying = null;
 	this.playingTimes = 0;
  	this.story = function(){
-			console.log("Мое имя " + this.name + ". Я " + this.color + " цвета. Мне " + this.age + " года. Моя пушистость оценивается как " + furArray[this.fur] + ". Со мной играли " + this.playingTimes + " раз, последний раз был в " + this.lastTimeIWasPlaying)
+
+			console.log("Мое имя " + this.name + ". Я "
+			 + this.color + " цвета. Мне "
+			  + this.age + " года. Моя пушистость оценивается как "
+			   + furArray[+ this.fur] + ". Со мной играли "
+			    + this.playingTimes + " раз, последний раз был в "
+			     + this.lastTimeIWasPlaying)
  		};
  	this.tolk = function(timesTolk){
  			for (var i = 0; i<timesTolk; i++){
