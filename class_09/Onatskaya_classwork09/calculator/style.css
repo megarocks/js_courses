@@ -26,3 +26,9 @@ h1{
 #getResults{
 	margin: 10px auto;
 }
+.maxRow{
+	background: blue!important;
+}
+.minRow{
+	background: green!important;
+}

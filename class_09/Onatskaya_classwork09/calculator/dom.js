@@ -70,6 +70,7 @@ function calculateInputValues() {
 	var resultInfo = document.createElement('div');
 	resultInfo.innerText = "The result is: " + inputValues.firstValue + inputValues.operator + inputValues.secondValue + " = " + results;
 	document.getElementById("inputs").appendChild(resultInfo);
+	//resArray.push(results);	//Каждый результат добавляется в массив, чтобы позже определить наибольшый результат из всех
 	return results;
 
 };
@@ -102,12 +103,13 @@ function createResultsTable() {
 			tr.appendChild(td);
 		}
 		
-		document.getElementsByTagName('td')[0].innerText = "Date";
+		$('td')[0].innerText = "Date";
+		$('td')[0].setAttribute("data-type", "string");
 		
-		document.getElementsByTagName('td')[1].innerText = "Expression";
+		$('td')[1].innerText = "Expression";
 		
-		document.getElementsByTagName('td')[2].innerText = "Result";
-		
+		$('td')[2].innerText = "Result";
+
 		// Добавляем тело таблицы
 		tableBody = document.createElement('tbody');
 		tableBody.insertRow(0);
@@ -129,8 +131,8 @@ function createResultsTable() {
 				td.innerText = inputValues.firstValue + inputValues.operator + inputValues.secondValue;
 		
 			} else if(j == 2){
-				td.innerText = calculateInputValues();
-		
+				resArray.push(td.innerText = calculateInputValues());//Каждую последнюю ячейку тела таблицы добавляем в массив, чтобы позже определить количество выполненных операций и среднее арифметическое
+				td.className = "result";
 			}
 
 
@@ -139,9 +141,102 @@ function createResultsTable() {
     
 }
 $('#getResults').click(createResultsTable);
-// Функция покраски строки с наибольшим результатом
-/*function painTheBiggestValueRow() {
 
-}*/
+
+
+
+var resArray = [];//Создаем массив из значений последних ячеек в каждой строке
+
+// Функция покраски строки с наибольшим результатом
+function paintTheBiggestValueRow() {
+	var max = resArray[0];//Находим максимальное значение из массива элементов
+	for(var i = 0; i <=resArray.length -1; i++){
+			
+		if((max - resArray[i]) <= 0){
+			max = resArray[i];
+		}
+		console.log(max);
+	}
+	var maxTd = document.getElementsByClassName("result");//Находим строку с классом .result
+	for( var i = 0; i <= maxTd.length-1; i++) {
+		if( maxTd[i].innerText == max) {//Сравниваем содержимое ячейки со значением максимального результата
+			maxTd[i].parentNode.className = "maxRow";
+			console.log(maxTd[i].parentNode.className);
+		}
+	}
+}
+
+$(".maximRow").click(paintTheBiggestValueRow);
+
+
+//Функция покраски строки с наименьшим результатом
+function paintTheSmallestValueRow() {
+	var min = resArray[0];//Находим минимальное значение из массива элементов
+	for(var i = 0; i <=resArray.length -1; i++){
+			
+		if((min - resArray[i]) >= 0){
+			min = resArray[i];
+		}
+		console.log(min);
+	}
+	var minTd = document.getElementsByClassName("result");//Находим строку с классом .result
+	for( var i = 0; i <= minTd.length-1; i++) {
+		if( minTd[i].innerText == min) {//Сравниваем содержимое ячейки со значением минимального результата
+			minTd[i].parentNode.className = "minRow";
+			console.log(minTd[i].parentNode.className);
+		}
+	}
+}
+
+$(".minimRow").click(paintTheSmallestValueRow);
+
+function getSum() {//Функция считает количество проведенных расчетов, а также сумму чисел из последней колонки
+	if(!document.getElementsByClassName('sum').length){
+	
+		var theSumText = document.createElement("p");/*Создаем и добавляем элемент для вывода нашей информации*/
+		theSumText.className = "sum";
+		$("#resultsTable").append(theSumText);
+	}
+	var operationsCounter = resArray.length;/*Количество расчетов равняется количеству ячеек с классом .result(получаем в функции createResultsTable)*/
+
+	//console.log(operationsCounter);
+	var theSum = 0;
+	for (var i = 0; i <= resArray.length -1; i++) {
+		theSum += resArray[i];/*Считаем сумму значений в каждой ячейке с классом .result*/
+	}
+	
+	$(".sum").text("There are was " + operationsCounter + " operations executed. The sum of all operations is " + theSum);
+	return theSum;
+}
+$('#getResults').click(getSum);
+
+
+
+
+
+function getAvg() {
+	
+	if(!document.getElementsByClassName('avg').length){
+	
+		var theAvgText = document.createElement("p");/*Создаем и добавляем элемент для вывода нашей информации*/
+		theSumText.className = "sum";
+		theAvgText.className = "avg";
+		$("#resultsTable").append(theAvgText);
+	}
+	
+	var theAvg = getSum()/resArray.length;/*Вычисляем среднее арифметическое, используя значение theSum из предидущей функции*/
+	
+	$(".avg").text("The avg of all operations is " + theAvg);
+}
+$('#getResults').click(getAvg);
+
+
+
+
+function clearTable() {//Очистка строк таблицы от данных
+	var tableText = $("tbody tr td").text("");//Заменяем существующий текст ячеек на пустую строку
+}
+$(".clearTable").click(clearTable);
+
 
 
