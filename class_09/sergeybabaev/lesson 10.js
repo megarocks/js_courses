@@ -1,21 +1,27 @@
+var calculatorPage = {
+
+	init: function () {
+		console.log("Calculator iniotializeted");
+
+	}
 var getX;
 var getY;
 var sign;
 var results;
-var myArray = [];
-var buttonCount = $("#button_count").click(counting);
-var buttonMax = $("#buttonMax").click(findMax); 
-var buttonMin = $("#buttonMin").click(findMin); 
-var buttonSum = $("#buttonSum").click(calcSum);                    
-var buttonAvg = $("#buttonAvg").click(calcAvg);  
+myArray: [];
+buttonCount: $("#button_count").click(counting);
+buttonMax: $("#buttonMax").click(findMax); 
+buttonMin: $("#buttonMin").click(findMin); 
+buttonSum: $("#buttonSum").click(calcSum);                    
+buttonAvg: $("#buttonAvg").click(calcAvg);  
 
-function getValue() {
+ getValue: function() {
 	getX = parseInt($('#ourX').val());
 	getY =  parseInt($('#ourY').val()); 
 	sign = $('#chooseOperator').val(); 
 };
 
-function counting() {
+counting: function() {
 	var value = getValue();
 
 	switch (sign) {
@@ -37,18 +43,18 @@ function counting() {
 };
 
 
-function findMax() {
+ findMax: function() {
 	var max = Math.max.apply(Math,myArray);
 	console.log("Максимальное значение: ",max);
 };
 
 
-function findMin() {
+ findMin: function() {
 	var min = Math.min.apply(Math,myArray);
 	console.log("Минимальное значение: ",min);
 };
 
-function calcSum() {
+ calcSum: function() {
 	var sum = 0;
 	for(var i=0; i < myArray.length; i++){
 	    sum = sum + parseInt(myArray[i]);
@@ -57,7 +63,7 @@ function calcSum() {
 	return sum;
 };
 
-function calcAvg() {						
+ calcAvg: function() {						
 	var sum = calcSum();
 	var avg = sum/myArray.length;
 	console.log("Среднее всех чисел: ",avg);
@@ -65,5 +71,5 @@ function calcAvg() {
 
 
 
-//------------------------------------------------
-//
+};
+calculatorPage.init();
