@@ -5,6 +5,9 @@
 	<title>Class 08</title>
 	<link rel="stylesheet" href="bootstrap.css">
 	<link rel="stylesheet" href="style.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 </head>
 <body>
 	<div id="wrapper" class="container">
@@ -25,12 +28,12 @@
 				<input type="number" value="" id= "secondInput" placeholder="value y">
 			</div>
 
-			<button onclick="compareInputValues()" class="btn btn-success"> Compare Values </button>
+			<button id="compare-values" class="btn btn-success"> Compare Values </button>
 			
 		</div>
 		
 		<div id="resultsTable">
-			<button id="getResults" onclick="createResultsTable()">Get the results of Math operation</button>
+			<button id="getResults">Get the results of Math operation</button>
 		</div>
 		<!-- <button onclick="painTheBiggestValueRow()" class="btn btn-success">The row with the biggest result</button> -->
 	</div>
