@@ -104,11 +104,12 @@ function createResultsTable() {
 		}
 		
 		$('td')[0].innerText = "Date";
-		$('td')[0].setAttribute("data-type", "string");
+		$('td')[0].setAttribute("id", "facility_header");
 		
 		$('td')[1].innerText = "Expression";
 		
 		$('td')[2].innerText = "Result";
+		$('td')[2].setAttribute("id", "city_header");
 
 		// Добавляем тело таблицы
 		tableBody = document.createElement('tbody');
@@ -219,7 +220,7 @@ function getAvg() {
 	if(!document.getElementsByClassName('avg').length){
 	
 		var theAvgText = document.createElement("p");/*Создаем и добавляем элемент для вывода нашей информации*/
-		theSumText.className = "sum";
+		//theSumText.className = "sum";
 		theAvgText.className = "avg";
 		$("#resultsTable").append(theAvgText);
 	}
@@ -238,5 +239,73 @@ function clearTable() {//Очистка строк таблицы от данн�
 }
 $(".clearTable").click(clearTable);
 
+/*-------------------------------------------------------------------------------------------------*/
+/*var table = $('table');
+    
+    $('#facility_header, #city_header')
+        .wrapInner('<span title="sort this column"/>')
+        .each(function(){
+            
+            var th = $(this),
+                thIndex = th.index(),
+                inverse = false;
+            
+            th.click(function(){
+                
+                table.find('td').filter(function(){
+                    
+                    return $(this).index() === thIndex;
+                    
+                }).sortElements(function(a, b){
+                    
+                    return $.text([a]) > $.text([b]) ?
+                        inverse ? -1 : 1
+                        : inverse ? 1 : -1;
+                    
+                }, function(){
+                    
+                    // parentNode is the element we want to move
+                    return this.parentNode; 
+                    
+                });
+                
+                inverse = !inverse;
+                    
+            });
+                
+        });*/
 
+/*function sortTable() {
+
+	var rows = $("tbody tr");
+	rows.sort(function(firstRow, secondRow){
+		var resultOfFirstRow = $(firstRow).find('td')[2].val();
+		var resultOfSecondRow = $(secondRow).find('td')[2].val();
+
+		console.debug('Row to sort: ',oneRow);	
+
+		return resultOfFirstRow - resultOfSecondRow;
+	});
+	console.log(rows);
+}
+
+
+$(".sort").click(sortTable);
+*/
+
+/*
+
+var calculatorPage = {
+	
+	init: function() {
+		console.debug("Calculator page initialized");
+	}
+}
+
+
+calculatorPage.init();
+
+http://jsfiddle.net/spetnik/gFzCk/1953/
+
+*/
 
