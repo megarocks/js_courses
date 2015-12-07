@@ -113,7 +113,7 @@ function createResultsTable() {
 
 		// Добавляем тело таблицы
 		tableBody = document.createElement('tbody');
-		tableBody.insertRow(0);
+		//tableBody.insertRow(0);
 		resultsTable.appendChild(tableBody);		
 	}
 	
@@ -240,7 +240,7 @@ function clearTable() {//Очистка строк таблицы от данн�
 $(".clearTable").click(clearTable);
 
 /*-------------------------------------------------------------------------------------------------*/
-/*var table = $('table');
+/* var table = $('table');
     
     $('#facility_header, #city_header')
         .wrapInner('<span title="sort this column"/>')
@@ -273,8 +273,8 @@ $(".clearTable").click(clearTable);
                     
             });
                 
-        });*/
-
+        });
+ */
 /*function sortTable() {
 
 	var rows = $("tbody tr");
