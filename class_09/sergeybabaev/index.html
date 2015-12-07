@@ -5,14 +5,14 @@
 	<title>Calculator</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
 
 	<input id="ourX" type="text" placeholder="Value X">
 
-
-	<select id="chooseOperator" onchange="getOperator()">
+	<select id="chooseOperator">
 	    <option value="*">*</option>
 	    <option value="/">/</option>
 	    <option value="+">+</option>
@@ -21,13 +21,12 @@
 	
 	<input id="ourY" type="text" placeholder="Value Y"><br />
 
-	<button id="result" onclick="count()">Вычислить</button><br />
+	<button id="button_count">Вычислить</button><br />
 
-	<button id="buttonMax" onclick="findMax()">Find max</button>
-	<button id="buttonMin" onclick="findMin()">Find min</button>
-	<button id="buttonSum" onclick="calcSum()">Calc sum</button>
-	<button id="buttonAvg" onclick="calcAvg()">Calc avg</button> <br />
-
+	<button id="buttonMax">Find max</button>
+	<button id="buttonMin">Find min</button>
+	<button id="buttonSum">Calc sum</button>
+	<button id="buttonAvg">Calc avg</button> <br />
 
 	<table align="center">
 		<tr>
@@ -53,11 +52,7 @@
 
 	</table>
 
-	
-
-
-
-		<script src="script.js"></script>
+<script src="script.js"></script>
 </div>
 </body>
 </html>
