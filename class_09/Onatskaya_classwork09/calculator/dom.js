@@ -109,7 +109,7 @@ function createResultsTable() {
 		$('td')[1].innerText = "Expression";
 		
 		$('td')[2].innerText = "Result";
-		$('td')[2].setAttribute("id", "city_header");
+		$('td')[2].setAttribute("class", "asc");
 
 		// Добавляем тело таблицы
 		tableBody = document.createElement('tbody');
@@ -240,121 +240,30 @@ function clearTable() {//Очистка строк таблицы от данн�
 $(".clearTable").click(clearTable);
 
 /*-------------------------------------------------------------------------------------------------*/
-
-function sortTable() {
-
+/*Сортировка строк таблицы по возрастанию результата*/
+$(document).on('click', ".asc", function () {
 	var rows = $("tbody tr");
 	rows.sort(function(firstRow, secondRow){
 
-		var resultOfFirstRow = $(firstRow).find('td')[2].val();
-		var resultOfSecondRow = $(secondRow).find('td')[2].val();
-
-		console.debug('Row to sort: ', oneRow);	
-
+		var resultOfFirstRow = parseInt($(firstRow).find('td')[2].innerText);
+		var resultOfSecondRow = parseInt($(secondRow).find('td')[2].innerText);
+		console.log(resultOfFirstRow - resultOfSecondRow);
 		return resultOfFirstRow - resultOfSecondRow;
 	});
-	console.log(rows);
-}
+	rows.appendTo('tbody');
+	$("thead tr td:last-child").removeClass("asc").addClass("desc");
+});
 
+/*Сортировка строк таблицы по убыванию результата*/
+$(document).on('click', ".desc", function () {
+	var rows = $("tbody tr");
+	rows.sort(function(firstRow, secondRow){
 
-$(".sort").click(sortTable);
-
-/*var homes = [{
-
-   "h_id": "3",
-   "city": "Dallas",
-   "state": "TX",
-   "zip": "75201",
-   "price": "162500"
-
-}, {
-
-   "h_id": "4",
-   "city": "Bevery Hills",
-   "state": "CA",
-   "zip": "90210",
-   "price": "319250"
-
-}, {
-
-   "h_id": "5",
-   "city": "New York",
-   "state": "NY",
-   "zip": "00010",
-   "price": "962500"
-
-}];
-
-var sort_by = function(field, reverse, primer){
-
-   var key = primer ? 
-       function(x) {return primer(x[field])} : 
-       function(x) {return x[field]};
-
-   reverse = !reverse ? 1 : -1;
-
-   return function (a, b) {
-       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-     } 
-}
-
-// Sort by price high to low
-homes.sort(sort_by('price', true, parseInt));
-
-// Sort by city, case-insensitive, A-Z
-homes.sort(sort_by('city', false, function(a){return a.toUpperCase()}));*/
-
-
-/* var table = $('table');
-    
-    $('#facility_header, #city_header')
-        .wrapInner('<span title="sort this column"/>')
-        .each(function(){
-            
-            var th = $(this),
-                thIndex = th.index(),
-                inverse = false;
-            
-            th.click(function(){
-                
-                table.find('td').filter(function(){
-                    
-                    return $(this).index() === thIndex;
-                    
-                }).sortElements(function(a, b){
-                    
-                    return $.text([a]) > $.text([b]) ?
-                        inverse ? -1 : 1
-                        : inverse ? 1 : -1;
-                    
-                }, function(){
-                    
-                    // parentNode is the element we want to move
-                    return this.parentNode; 
-                    
-                });
-                
-                inverse = !inverse;
-                    
-            });
-                
-        });
- */
-
-
-/*
-
-var calculatorPage = {
-	
-	init: function() {
-		console.debug("Calculator page initialized");
-	}
-}
-
-
-calculatorPage.init();
-
-http://jsfiddle.net/spetnik/gFzCk/1953/
-
-*/
-
+		var resultOfFirstRow = parseInt($(firstRow).find('td')[2].innerText);
+		var resultOfSecondRow = parseInt($(secondRow).find('td')[2].innerText);
+		console.log( resultOfSecondRow - resultOfFirstRow);
+		return resultOfSecondRow - resultOfFirstRow;
+	});
+	rows.appendTo('tbody');
+	$("thead tr td:last-child").removeClass("desc").addClass("asc");
+});

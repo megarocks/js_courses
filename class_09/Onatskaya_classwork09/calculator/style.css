@@ -32,3 +32,9 @@ h1{
 .minRow{
 	background: green!important;
 }
+.asc{
+	background: url(asc.png) no-repeat center right;
+}
+.desc{
+	background: url(desc.png) no-repeat center right;
+}
