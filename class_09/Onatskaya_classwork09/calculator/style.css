@@ -32,9 +32,11 @@ h1{
 .minRow{
 	background: green!important;
 }
-.asc{
+.asc,
+.dateAsc{
 	background: url(asc.png) no-repeat center right;
 }
-.desc{
+.desc,
+.dateDesc{
 	background: url(desc.png) no-repeat center right;
 }

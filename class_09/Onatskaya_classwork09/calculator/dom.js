@@ -104,7 +104,7 @@ function createResultsTable() {
 		}
 		
 		$('td')[0].innerText = "Date";
-		$('td')[0].setAttribute("id", "facility_header");
+		$('td')[0].setAttribute("class", "dateAsc");
 		
 		$('td')[1].innerText = "Expression";
 		
@@ -266,4 +266,32 @@ $(document).on('click', ".desc", function () {
 	});
 	rows.appendTo('tbody');
 	$("thead tr td:last-child").removeClass("desc").addClass("asc");
+});
+
+/*------------------------------------------------------------------------------------------*/
+$(document).on('click', ".dateAsc", function () {
+	var rows = $("tbody tr");
+	rows.sort(function(firstRow, secondRow){
+
+		var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].innerText);
+		var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].innerText);
+		console.log(resultOfFirstRow - resultOfSecondRow);
+		return resultOfFirstRow - resultOfSecondRow;
+	});
+	rows.appendTo('tbody');
+	$("thead tr td:first-child").removeClass("dateAsc").addClass("dateDesc");
+});
+
+/*Сортировка строк таблицы по убыванию результата*/
+$(document).on('click', ".dateDesc", function () {
+	var rows = $("tbody tr");
+	rows.sort(function(firstRow, secondRow){
+
+		var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].innerText);
+		var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].innerText);
+		console.log( resultOfSecondRow - resultOfFirstRow);
+		return resultOfSecondRow - resultOfFirstRow;
+	});
+	rows.appendTo('tbody');
+	$("thead tr td:first-child").removeClass("dateDesc").addClass("dateAsc");
 });
