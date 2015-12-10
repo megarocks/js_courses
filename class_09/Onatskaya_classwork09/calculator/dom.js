@@ -4,7 +4,6 @@ var selectValue;
 var results;
 
 
-<<<<<<< HEAD
 /*$('.btn').on('click', function() {
 	alert("Button clicked");
 });*/
@@ -28,44 +27,28 @@ function getInputValues() {
 		operator: selectValue
 	}
 	return inputValuesArray
-=======
-//Получение значения из инпутов и селекта
-function getInputValues() {
-
-    firstInputValue = parseInt($("#firstInput").val());    //value == val()
-    secondInputValue = parseInt($("#secondInput").val());  //
-    selectValue = $("#operators").val();
-
-    var inputValuesArray = {
-        firstValue: firstInputValue,
-        secondValue: secondInputValue,
-        operator: selectValue
-    }
-    return inputValuesArray
->>>>>>> origin/master
 };
 
 
 // Функция сравнения данных, полученых в предидущей функции
 function compareInputValues() {
-    var inputValues = getInputValues();
-    var result = document.createElement('div');
-    document.getElementById("inputs").appendChild(result);
+	var inputValues = getInputValues();
+	var result = document.createElement('div');
+	document.getElementById("inputs").appendChild(result);
+	  
 
-
-    if (inputValues.firstValue > inputValues.secondValue) {
-        result.innerText = "The first input number is bigger (" + inputValues.firstValue + ")";
-    } else if (inputValues.firstValue < inputValues.secondValue) {
-        result.innerText = "The second input number is bigger (" + inputValues.secondValue + ")";
-    } else {
-        result.innerText = "The numbers are equal";
-    }
+	if (inputValues.firstValue > inputValues.secondValue) {
+		result.innerText = "The first input number is bigger (" + inputValues.firstValue + ")";
+	} else if (inputValues.firstValue < inputValues.secondValue) {
+		result.innerText = "The second input number is bigger (" + inputValues.secondValue + ")";
+	} else {
+		result.innerText = "The numbers are equal";
+	}
 };
 
 $('#compare-values').click(compareInputValues);
 // Функция, считающая введенное пользователем выражение (значения из инпутов и знак из селекта)
 function calculateInputValues() {
-<<<<<<< HEAD
 	var inputValues = getInputValues();
 
 
@@ -89,30 +72,6 @@ function calculateInputValues() {
 	document.getElementById("inputs").appendChild(resultInfo);
 	//resArray.push(results);	//Каждый результат добавляется в массив, чтобы позже определить наибольшый результат из всех
 	return results;
-=======
-    var inputValues = getInputValues();
-
-
-    switch (inputValues.operator) {
-        case "+":
-            results = inputValues.firstValue + inputValues.secondValue
-            break
-        case "-":
-            results = inputValues.firstValue - inputValues.secondValue
-            break
-        case "*":
-            results = inputValues.firstValue * inputValues.secondValue
-            break
-        case "/":
-            results = inputValues.firstValue / inputValues.secondValue
-            break
-
-    }
-    var resultInfo = document.createElement('div');
-    resultInfo.innerText = "The result is: " + inputValues.firstValue + inputValues.operator + inputValues.secondValue + " = " + results;
-    document.getElementById("inputs").appendChild(resultInfo);
-    return results;
->>>>>>> origin/master
 
 };
 
@@ -122,7 +81,6 @@ var tableBody = {};
 
 function createResultsTable() {
 
-<<<<<<< HEAD
 	var inputValues = getInputValues();
 	
 	// Если таблица с таким классом не существует, тогда создаем такую таблицу
@@ -182,65 +140,6 @@ function createResultsTable() {
 		}
 	
     
-=======
-    var inputValues = getInputValues();
-
-    // Если таблица с таким классом не существует, тогда создаем такую таблицу
-    if (!document.getElementsByClassName('table-striped').length) {
-
-        var resultsTable = document.createElement("table");
-        resultsTable.border = '1';
-        resultsTable.className = "table table-striped";
-        document.getElementById("resultsTable").appendChild(resultsTable);
-
-        // Добавляем шапку таблицы
-        var tableHead = document.createElement('thead');
-        resultsTable.appendChild(tableHead);
-
-        var tr = document.createElement('tr');
-        tableHead.appendChild(tr);
-
-        for (var i = 0; i < 3; i++) {
-            var td = document.createElement('td');
-            tr.appendChild(td);
-        }
-
-        document.getElementsByTagName('td')[0].innerText = "Date";
-
-        document.getElementsByTagName('td')[1].innerText = "Expression";
-
-        document.getElementsByTagName('td')[2].innerText = "Result";
-
-        // Добавляем тело таблицы
-        tableBody = document.createElement('tbody');
-        tableBody.insertRow(0);
-        resultsTable.appendChild(tableBody);
-    }
-
-    // Добавляем одну строку в таблицу при каждом вызове функции и заполняем ее данными (время операции, вычисляемое выражение, результат)
-    //var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
-    var date = moment().format('LLLL');
-    var tr = document.createElement('tr');
-    tableBody.appendChild(tr);
-    for (var j = 0; j < 3; j++) {
-        var td = document.createElement('td');
-        tr.appendChild(td);
-
-        if (j == 0) {
-            td.innerText = date;
-        } else if (j == 1) {
-            td.innerText = inputValues.firstValue + inputValues.operator + inputValues.secondValue;
-
-        } else if (j == 2) {
-            td.innerText = calculateInputValues();
-
-        }
-
-
-    }
-
-
->>>>>>> origin/master
 }
 $('#getResults').click(createResultsTable);
 
@@ -249,7 +148,6 @@ $('#getResults').click(createResultsTable);
 
 var resArray = [];//Создаем массив из значений последних ячеек в каждой строке
 
-<<<<<<< HEAD
 // Функция покраски строки с наибольшим результатом
 function paintTheBiggestValueRow() {
 	var max = resArray[0];//Находим максимальное значение из массива элементов
@@ -397,16 +295,3 @@ $(document).on('click', ".dateDesc", function () {
 	rows.appendTo('tbody');
 	$("thead tr td:first-child").removeClass("dateDesc").addClass("dateAsc");
 });
-=======
-var myButton = $('#compare-values');
-
-myButton.on('click', function(){
-
-    compareInputValues();
-
-
-});
-
-
-jQuery('#getResults').click(createResultsTable);
->>>>>>> origin/master
