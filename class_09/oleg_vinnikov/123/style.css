@@ -1,0 +1,48 @@
+
+.input-menu {
+	text-align: center;
+	margin: 15px 0 10px 0;
+}
+.form-group {
+	display: inline-block;
+}
+.form-group .form-control {
+	margin: 0 auto;
+}
+#value {
+	width: 70%;
+	background-color: #eb9316;
+}
+#sel1 {
+	width: 105%;
+	background-color: #eb9316;
+}
+.form-control {
+	color: #fff;
+}
+.btn1 {
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+.option-btn {
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+.option-btn button {
+	margin: 0 5px 0 5px;
+}
+.result {
+	text-align: center;
+}
+.result p {
+	font-size: 12pt;
+	font-weight: bold;
+	color: #eb9316;
+}
+#example {
+	width: 28%;
+	margin: 0 auto;
+}
+table {
+	display: none;
+}
