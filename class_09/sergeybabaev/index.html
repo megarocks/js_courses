@@ -10,49 +10,32 @@
 <body>
 <div id="wrapper">
 
-	<input id="ourX" type="text" placeholder="Value X">
+	<input id="value-x" type="text" placeholder="Value X">
 
-	<select id="chooseOperator">
+	<select id="selector">
 	    <option value="*">*</option>
 	    <option value="/">/</option>
 	    <option value="+">+</option>
 	    <option value="-">-</option>
 	</select>
 	
-	<input id="ourY" type="text" placeholder="Value Y"><br />
+	<input id="value-y" type="text" placeholder="Value Y"><br />
 
-	<button id="button_count">Вычислить</button><br />
+	<button id="calculate_button">Вычислить</button><br />
 
-	<button id="buttonMax">Find max</button>
-	<button id="buttonMin">Find min</button>
-	<button id="buttonSum">Calc sum</button>
-	<button id="buttonAvg">Calc avg</button> <br />
+	<button id="btnMax">Find max</button>
+	<button id="btnMin">Find min</button>
+	<button id="btnSum">Calc sum</button>
+	<button id="btnAvg">Calc avg</button> <br />
 
-	<table align="center">
-		<tr>
-			<th>Date/Time</th>
-			<th>Expression</th>
-			<th>Result</th>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
+<table id="myTable">
+	<tbody>
+		
+	</tbody>
+</table>
 
-	</table>
-
-<script src="script.js"></script>
+<div id='output'></div>
+<script src="calculator.js"></script>
 </div>
 </body>
 </html>
