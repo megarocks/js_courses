@@ -221,6 +221,7 @@ var calculatorPage = {
 
 	/*Сортировка строк таблицы по возрастанию результата*/
 	sortByResultAsc: function () {
+
 		var rows = $("tbody tr");
 		rows.sort(function(firstRow, secondRow){
 
