@@ -22,10 +22,14 @@ var calculatorPage = {
     	$('#getResults').click(calculatorPage.getSum);
     	$('#getResults').click(calculatorPage.getAvg);
     	$(".clearTable").click(calculatorPage.clearTable);
-    	$(".asc").click(calculatorPage.sortByResultAsc);
+    	$(document).on("click", ".asc", calculatorPage.sortByResultAsc);
+    	$(document).on("click", ".desc", calculatorPage.sortByResultDesc);
+    	$(document).on("click", ".dateAsc", calculatorPage.sortByDateAsc);
+    	$(document).on("click", ".dateDesc", calculatorPage.sortByDateDesc);
+    	/*$(".asc").click(calculatorPage.sortByResultAsc);
     	$(".desc").click(calculatorPage.sortByResultDesc);
     	$(".dateAsc").click(calculatorPage.sortByDateAsc);
-    	$(".dateDesc").click(calculatorPage.sortByDateDesc);
+    	$(".dateDesc").click(calculatorPage.sortByDateDesc);*/
 
 
     },
