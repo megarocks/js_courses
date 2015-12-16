@@ -56,11 +56,11 @@ var calculatorPage = {
 		  
 
 		if (inputValues.firstValue > inputValues.secondValue) {
-			result.innerText = "The first input number is bigger (" + inputValues.firstValue + ")";
+			result.textContent = "The first input number is bigger (" + inputValues.firstValue + ")";
 		} else if (inputValues.firstValue < inputValues.secondValue) {
-			result.innerText = "The second input number is bigger (" + inputValues.secondValue + ")";
+			result.textContent = "The second input number is bigger (" + inputValues.secondValue + ")";
 		} else {
-			result.innerText = "The numbers are equal";
+			result.textContent = "The numbers are equal";
 		}
 	},
 
@@ -84,7 +84,7 @@ var calculatorPage = {
 
 		}
 		var resultInfo = document.createElement('div');
-		resultInfo.innerText = "The result is: " + inputValues.firstValue + inputValues.operator + inputValues.secondValue + " = " + calculatorPage.results;
+		resultInfo.textContent = "The result is: " + inputValues.firstValue + inputValues.operator + inputValues.secondValue + " = " + calculatorPage.results;
 		document.getElementById("inputs").appendChild(resultInfo);
 		//resArray.push(calculatorPage.results);	//Каждый результат добавляется в массив, чтобы позже определить наибольшый результат из всех
 		return calculatorPage.results;
@@ -98,7 +98,7 @@ var calculatorPage = {
 		
 			var resultsTable = document.createElement("table");
 			resultsTable.border='1';
-			resultsTable.className = "table table-striped";
+			resultsTable.className = "table-striped col-xs-12 col-sm-8 col-sm-offset-2";
 			document.getElementById("resultsTable").appendChild(resultsTable);
 
 			// Добавляем шапку таблицы
@@ -113,12 +113,12 @@ var calculatorPage = {
 				tr.appendChild(td);
 			}
 			
-			$('td')[0].innerText = "Date";
+			$('td')[0].textContent = "Date";
 			$('td')[0].setAttribute("class", "dateAsc");
 			
-			$('td')[1].innerText = "Expression";
+			$('td')[1].textContent = "Expression";
 			
-			$('td')[2].innerText = "Result";
+			$('td')[2].textContent = "Result";
 			$('td')[2].setAttribute("class", "asc");
 
 			// Добавляем тело таблицы
@@ -137,12 +137,12 @@ var calculatorPage = {
 			tr.appendChild(td);
 
 			if (j == 0){
-				td.innerText = date;
+				td.textContent = date;
 			} else if(j == 1){
-				td.innerText = inputValues.firstValue + inputValues.operator + inputValues.secondValue;
+				td.textContent = inputValues.firstValue + inputValues.operator + inputValues.secondValue;
 		
 			} else if(j == 2){
-				calculatorPage.resArray.push(td.innerText = calculatorPage.calculateInputValues());//Каждую последнюю ячейку тела таблицы добавляем в массив, чтобы позже определить количество выполненных операций и среднее арифметическое
+				calculatorPage.resArray.push(td.textContent = calculatorPage.calculateInputValues());//Каждую последнюю ячейку тела таблицы добавляем в массив, чтобы позже определить количество выполненных операций и среднее арифметическое
 				td.className = "result";
 			}
 		}
@@ -160,7 +160,7 @@ var calculatorPage = {
 		}
 		var maxTd = document.getElementsByClassName("result");//Находим строку с классом .result
 		for( var i = 0; i <= maxTd.length-1; i++) {
-			if( maxTd[i].innerText == max) {//Сравниваем содержимое ячейки со значением максимального результата
+			if( maxTd[i].textContent == max) {//Сравниваем содержимое ячейки со значением максимального результата
 				maxTd[i].parentNode.className = "maxRow";
 				console.log(maxTd[i].parentNode.className);
 			}
@@ -178,7 +178,7 @@ var calculatorPage = {
 		}
 		var minTd = document.getElementsByClassName("result");//Находим строку с классом .result
 		for( var i = 0; i <= minTd.length-1; i++) {
-			if( minTd[i].innerText == min) {//Сравниваем содержимое ячейки со значением минимального результата
+			if( minTd[i].textContent == min) {//Сравниваем содержимое ячейки со значением минимального результата
 				minTd[i].parentNode.className = "minRow";
 				console.log(minTd[i].parentNode.className);
 			}
@@ -229,8 +229,8 @@ var calculatorPage = {
 		var rows = $("tbody tr");
 		rows.sort(function(firstRow, secondRow){
 
-			var resultOfFirstRow = parseInt($(firstRow).find('td')[2].innerText);
-			var resultOfSecondRow = parseInt($(secondRow).find('td')[2].innerText);
+			var resultOfFirstRow = parseInt($(firstRow).find('td')[2].textContent);
+			var resultOfSecondRow = parseInt($(secondRow).find('td')[2].textContent);
 			console.log(resultOfFirstRow - resultOfSecondRow);
 			return resultOfFirstRow - resultOfSecondRow;
 		});
@@ -243,8 +243,8 @@ var calculatorPage = {
 		var rows = $("tbody tr");
 		rows.sort(function(firstRow, secondRow){
 
-			var resultOfFirstRow = parseInt($(firstRow).find('td')[2].innerText);
-			var resultOfSecondRow = parseInt($(secondRow).find('td')[2].innerText);
+			var resultOfFirstRow = parseInt($(firstRow).find('td')[2].textContent);
+			var resultOfSecondRow = parseInt($(secondRow).find('td')[2].textContent);
 			console.log( resultOfSecondRow - resultOfFirstRow);
 			return resultOfSecondRow - resultOfFirstRow;
 		});
@@ -256,8 +256,8 @@ var calculatorPage = {
 		var rows = $("tbody tr");
 		rows.sort(function(firstRow, secondRow){
 
-			var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].innerText);
-			var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].innerText);
+			var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].textContent);
+			var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].textContent);
 			console.log(resultOfFirstRow - resultOfSecondRow);
 			return resultOfFirstRow - resultOfSecondRow;
 		});
@@ -270,8 +270,8 @@ var calculatorPage = {
 		var rows = $("tbody tr");
 		rows.sort(function(firstRow, secondRow){
 
-			var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].innerText);
-			var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].innerText);
+			var resultOfFirstRow = Date.parse($(firstRow).find('td')[0].textContent);
+			var resultOfSecondRow = Date.parse($(secondRow).find('td')[0].textContent);
 			console.log( resultOfSecondRow - resultOfFirstRow);
 			return resultOfSecondRow - resultOfFirstRow;
 		});
