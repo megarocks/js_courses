@@ -1,35 +1,86 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>hw_8</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+
 </head>
+<style>
+    .form-group {
+        display: block;
+    }
+    .border {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 6px;
+    }
+</style>
 <body>
+    <header></header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <h1>Фильмы</h1>
+                <div class="col-lg-5">
+                        <h3>Порекомендуйте фильмы</h3>
+                        <div class="form-group">
+                            <label class="control-label">Название:</label>
+                            <input type="text" class="form-control" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Жанр:</label>
+                            <input type="text" class="form-control" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Год:</label>
+                            <input type="text" class="form-control" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Описание</label>
+                            <textarea rows="2" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Ccылка на картинку:</label>
+                            <input type="text" class="form-control" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Ваше имя:</label>
+                            <input type="text" class="form-control" value=""/>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-success">Оставить рекомендацию</button>
+                        </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2">
+                    <h3>Рекомендации друзей</h3>
+                        <div class="col-lg-12 text-center border">
+                            <img src="img.jpg" alt=""/>
+                            <div class="row">
+                                <div class="col-lg-12 text-left">
+                                    <h4>
+                                        Безумный Макс 4: Дорога ярости (2015)
+                                    </h4>
+                                    <p>Год : 2015</p>
+                                    <p>Описание: Один из любимых фильмов, рекомендую к просмотру.</p>
+                                    <p>Рекомендация от: Стаса</p>
+                                    <p>Дата рекомендации: </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
 
-
-<script>
-    var a = prompt('Put in number A');
-    var b = prompt('Put in number B');
-    var myArray = [];
-    if (a >= 1 && b <= 100 && a < b) {
-        for (a; a <= b; a++) {
-            document.write('Number - ' + a + '<br />');
-            var aInt = parseInt(a, 10);
-            myArray.push(aInt);
-        }
-    } else {
-        document.write('you put in wrong data');
-    }
-    document.write('My Array is - ', myArray, '<br>');
-
-    function sumSquareOfArray() {
-        var sumSquare = 0;
-        for (var i = 0; i < myArray.length; i++) {
-            sumSquare = sumSquare + (myArray[i] * myArray[i]);
-        }
-        document.write('My sumSquare is - ', sumSquare);
-    }
-    sumSquareOfArray();
-</script>
+    <script src="calculator.js"></script>
 </body>
 </html>
