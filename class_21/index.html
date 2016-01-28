@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meet Angular</title>
+</head>
+<body>
+
+
+<div ng-app="myApp" style="border: 1px solid orange; height: 300px">
+
+    <input type="text" ng-model="myModel">
+
+    <p>Author: {{ myModel }}</p>
+
+    <div style="width: 50%; margin: 20px auto; border: 1px dashed black; height: 200px" ng-controller="myCtrl">
+
+        <p ng-if=" myName.length > 2 ">My Name Is: {{myName}}</p>
+
+        <input type="text" ng-model="myName">
+
+        <button ng-click="displayAlert()">Display Hello!</button>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.1/angular.min.js"></script>
+
+<script>
+
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('myCtrl', function ($scope) {
+
+        $scope.myName = "Vitaly";
+
+        $scope.displayAlert = function () {
+
+            alert('Hello ' + $scope.myName);
+
+        }
+
+    });
+
+</script>
+</body>
+</html>
