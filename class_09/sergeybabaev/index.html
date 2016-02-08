@@ -4,59 +4,38 @@
 	<meta charset="UTF-8">
 	<title>Calculator</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
 
-	<input id="ourX" type="text" placeholder="Value X">
+	<input id="value-x" type="text" placeholder="Value X">
 
-
-	<select id="chooseOperator" onchange="getOperator()">
+	<select id="selector">
 	    <option value="*">*</option>
 	    <option value="/">/</option>
 	    <option value="+">+</option>
 	    <option value="-">-</option>
 	</select>
 	
-	<input id="ourY" type="text" placeholder="Value Y"><br />
+	<input id="value-y" type="text" placeholder="Value Y"><br />
 
-	<button id="result" onclick="count()">Вычислить</button><br />
+	<button id="calculate_button">Вычислить</button><br />
 
-	<button id="buttonMax" onclick="findMax()">Find max</button>
-	<button id="buttonMin" onclick="findMin()">Find min</button>
-	<button id="buttonSum" onclick="calcSum()">Calc sum</button>
-	<button id="buttonAvg" onclick="calcAvg()">Calc avg</button> <br />
+	<button id="btnMax">Find max</button>
+	<button id="btnMin">Find min</button>
+	<button id="btnSum">Calc sum</button>
+	<button id="btnAvg">Calc avg</button> <br />
 
+<table id="myTable">
+	<tbody>
+		
+	</tbody>
+</table>
 
-	<table align="center">
-		<tr>
-			<th>Date/Time</th>
-			<th>Expression</th>
-			<th>Result</th>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
-		<tr>
-			<td>Значение</td>
-			<td>Значение</td>
-			<td>Значение</td>
-		</tr>
-
-	</table>
-
-	
-
-
-
-		<script src="script.js"></script>
+<div id='output'></div>
+<script src="calculator.js"></script>
 </div>
 </body>
 </html>

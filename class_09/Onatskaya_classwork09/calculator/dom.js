@@ -6,6 +6,18 @@ var results;
 
 //Получение значения из инпутов и селекта
 function getInputValues() {
+<<<<<<< HEAD
+	
+	firstInputValue =parseInt($('#firstInput').val());
+	secondInputValue = parseInt($('#secondInput').val());
+	selectValue = $("#operators").val();
+		var inputValuesArray = {
+		firstValue: firstInputValue,
+		secondValue:  secondInputValue,
+		operator: selectValue
+	}
+	return inputValuesArray
+=======
 
     firstInputValue = parseInt($("#firstInput").val());    //value == val()
     secondInputValue = parseInt($("#secondInput").val());  //
@@ -17,6 +29,7 @@ function getInputValues() {
         operator: selectValue
     }
     return inputValuesArray
+>>>>>>> origin/master
 };
 
 
@@ -69,6 +82,65 @@ var tableBody = {};
 
 function createResultsTable() {
 
+<<<<<<< HEAD
+	var inputValues = getInputValues();
+	
+	// Если таблица с таким классом не существует, тогда создаем такую таблицу
+	if(!document.getElementsByClassName('table-striped').length){
+	
+		var resultsTable = document.createElement("table");
+		resultsTable.border='1';
+		resultsTable.className = "table table-striped";
+		document.getElementById("resultsTable").appendChild(resultsTable);
+
+		// Добавляем шапку таблицы
+		var tableHead = document.createElement('thead');
+		resultsTable.appendChild(tableHead);
+		
+		var tr = document.createElement('tr');
+		tableHead.appendChild(tr);
+
+		for (var i=0; i<3; i++){
+			var td = document.createElement('td');
+			tr.appendChild(td);
+		}
+		
+		document.getElementsByTagName('td')[0].innerText = "Date";
+		
+		document.getElementsByTagName('td')[1].innerText = "Expression";
+		
+		document.getElementsByTagName('td')[2].innerText = "Result";
+		
+		// Добавляем тело таблицы
+		tableBody = document.createElement('tbody');
+		tableBody.insertRow(0);
+		resultsTable.appendChild(tableBody);		
+	}
+	
+	// Добавляем одну строку в таблицу при каждом вызове функции и заполняем ее данными (время операции, вычисляемое выражение, результат)
+    //var date = (new Date).getDay() + "." + (new Date).getMonth() + "." + (new Date).getFullYear() + ", " + (new Date).getHours() + "." + (new Date).getMinutes();
+	var date = moment().format('LLLL');
+	var tr = document.createElement('tr');
+		tableBody.appendChild(tr);
+		for (var j=0; j<3; j++){
+			var td = document.createElement('td');
+			tr.appendChild(td);
+
+			if (j == 0){
+				td.innerText = date;
+			} else if(j == 1){
+				td.innerText = inputValues.firstValue + inputValues.operator + inputValues.secondValue;
+		
+			} else if(j == 2){
+				td.innerText = calculateInputValues();
+		
+			}
+
+
+		}
+	
+    
+=======
     var inputValues = getInputValues();
 
     // Если таблица с таким классом не существует, тогда создаем такую таблицу
@@ -126,6 +198,7 @@ function createResultsTable() {
     }
 
 
+>>>>>>> origin/master
 }
 
 var myButton = $('#compare-values');
@@ -138,4 +211,16 @@ myButton.on('click', function(){
 });
 
 
+<<<<<<< HEAD
+}*/
+
+
+
+var myButton = $('#compare-values');
+myButton.click(compareInputValues);
+
+var myResultButton = $('#getResults');
+myResultButton.click(createResultsTable);
+=======
 jQuery('#getResults').click(createResultsTable);
+>>>>>>> origin/master
