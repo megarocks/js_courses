@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Class 08</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="container">
+		<h1>Calculator</h1>
+		<div id = "inputs">
+			<div>
+				<input type="number" value="" id="firstInput" placeholder="value x">
+
+				<div id="selectAria">
+					<select id="operators" onchange = "calculateInputValues()">
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</div>
+
+				<input type="number" value="" id= "secondInput" placeholder="value y">
+			</div>
+
+			<button id="compare-values" class="btn btn-success"> Compare Values </button>
+			
+		</div>
+		
+		<div id="resultsTable">
+			<button id="getResults">Get the results of Math operation</button>
+		</div>
+		<!-- <button onclick="painTheBiggestValueRow()" class="btn btn-success">The row with the biggest result</button> -->
+	</div>
+	<script type="text/javascript" src="dom.js"></script>
+</body>
+</html>

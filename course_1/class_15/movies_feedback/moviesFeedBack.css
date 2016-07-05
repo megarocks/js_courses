@@ -1,0 +1,8 @@
+#movie-recommendations-feed img {
+    max-height: 200px;
+}
+
+#movie-recommendations-feed {
+    max-height: 500px;
+    overflow-y: scroll;
+}
