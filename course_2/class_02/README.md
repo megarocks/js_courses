@@ -16,7 +16,7 @@
 
 1. window, document, console 
 
-## функции
+## Использование функций
 
 1. alert, prompt, confirm, log
 
