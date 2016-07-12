@@ -96,7 +96,7 @@ typeof undefined;
 7 - "" * 2;
 (7 - "") * 2;
 "\n8\t" + 12;
-"\t12\" -5;
+"\t12\n" -5;
 21 * null;
 false == null;
 false == 0;
