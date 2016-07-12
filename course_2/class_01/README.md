@@ -18,7 +18,7 @@
       
 ## Приведение типов
 
-!(https://github.com/megarocks/js_courses/blob/master/course_2/class_01/coercion2.png)
+![coercion](https://github.com/megarocks/js_courses/blob/master/course_2/class_01/coercion2.png)
 
 ## Использование логических операторов
 
