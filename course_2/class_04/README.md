@@ -3,7 +3,13 @@
 #### Определение функции
 
 ```javascript
-var greet = function(name) {
+function name(parameter1, parameter2, parameter3) {
+    //code to be executed
+}
+```
+
+```javascript
+function greet(name) {
   return "Hello, " + name;
 }
 
@@ -21,7 +27,7 @@ var sayHello = function() {
 
 sayHello();
 ```
-> Hello
+> Hello  
 undefined
 
 Функция с несколькими параметрами:
@@ -101,8 +107,8 @@ console.log(x);
 console.log(y);
 console.log(z);
 ```
->2
-3
+>2  
+3  
 Uncaught ReferenceError: z is not defined(…)
 
 #### Функция в качестве параметра и вызов функции
@@ -127,8 +133,8 @@ function functionCaller(functionToCall) {
 // в данном случае мы отдаём функции functionCaller функцию mySuperFunction
 functionCaller(mySuperFunction);
 ```
->mySuperFunction called
-mySuperFunction called
+>mySuperFunction called  
+mySuperFunction called  
 mySuperFunction called
 
 #### Обьявление функции
@@ -165,43 +171,21 @@ var multiply = function(a, b, c) {
 ```
 >Uncaught TypeError: multiply is not a function(…)
 
-#### Стек вызовов
-```javascript
-function greet (name) {
-  console.log('Hello ' + name);
-  greetWithAlert(name);
-}
-function greetWithAlert(name) {
-  alert("Hello " + name);
-}
 
-greet('John Smith');
-console.log('Goodbye');
+#### Анонимные функции
+
+```javascript
+function sayHello() {
+  console.log("Hello");
+};
+
+setInterval(sayHello, 5000);
 ```
 
->top
-&nbsp;&nbsp;greet
-&nbsp;&nbsp;&nbsp;&nbsp;console.log
-&nbsp;&nbsp;&nbsp;&nbsp;greetWithAlert
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert
-&nbsp;&nbsp;&nbsp;&nbsp;greetWithAlert
-&nbsp;&nbsp;greet
-top
-top
-&nbsp;&nbsp;console.log
-top
-
-Stack Overflow:
 ```javascript
-function sayToWoman() {
-  //console.log('Ты первая клади трубку')
-  return sayToMan();
-}
-function sayToMan() {
-  //console.log('Ты первый клади трубку')
-  return sayToWoman();
-}
-console.log(sayToMan());
+setInterval(function() {
+  console.log('Hello!')  
+}, 5000);
 ```
 
 #### Необязательные параметры (аргументы)
@@ -221,10 +205,22 @@ console.log(multiply(5,7));
 console.log(multiply(5));
 ```
 
->35
+>35  
 25
 
 #### Замыкания
+
+```javascript
+function createCounter() {
+   var numberOfCalls = 0;
+   return function() {
+      return ++numberOfCalls;
+   }
+}
+var counter = createCounter();
+console.log(counter(),counter(),counter());
+```
+> 1 2 3
 
 ```javascript
 function sumWithNumber(a) {
@@ -237,8 +233,84 @@ var sumWith7 = sumWithNumber(7);
 console.log(sumWith7(8));
 console.log(sumWith7(25));
 ```
->15
+>15  
 32
 
+#### Стек вызовов
+```javascript
+function greet (name) {
+  console.log('Hello ' + name);
+  greetWithAlert(name);
+}
+function greetWithAlert(name) {
+  alert("Hello " + name);
+}
+
+greet('John Smith');
+console.log('Goodbye');
+```
+
+>top  
+&nbsp;&nbsp;greet  
+&nbsp;&nbsp;&nbsp;&nbsp;console.log  
+&nbsp;&nbsp;&nbsp;&nbsp;greetWithAlert  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert  
+&nbsp;&nbsp;&nbsp;&nbsp;greetWithAlert  
+&nbsp;&nbsp;greet  
+top  
+top  
+&nbsp;&nbsp;console.log  
+top
+
+Stack Overflow:
+```javascript
+function sayToWoman() {
+  //console.log('Ты первая клади трубку')
+  return sayToMan();
+}
+function sayToMan() {
+  //console.log('Ты первый клади трубку')
+  return sayToWoman();
+}
+console.log(sayToMan());
+```
+
 #### Рекурсия
+
+```javascript
+function power(base, exponent) {
+  if (exponent == 0)
+    return 1;
+  else
+    return base * power(base, exponent - 1);
+}
+
+console.log(power(2, 3));
+```
+
+## Задачи
+
+1. Напишите функцию принимающую в качестве параметра число и возвращающую переданное чесло возведенное в куб.
+
+2. Напишите функцию, принимающую в качестве параметров две строки. Код функции должен проверять являются ли переданные параметры строками. Если так, то выполнять конкатенацию и возврат результата. В случае если хотя бы один из параметров - не строка, - показывать alert с ошибкой. 
+Используйте возвращенное функцией значение для вывода в консоль.
+
+3. Напишите функцию принимающую в качестве параметров два числа. Если были переданы оба числа - то верните их сумму. Если было передано одно число - то удвойте его и верните. Если функция была вызвана без параметров - верните 0.
+
+4. Напишите функцию min(a,b), которая возвращает меньшее из чисел a,b.
+
+5. Напишите функцию, которая принимает в качестве параметра значени года, и возвращает булевое значение: если высокосный - true, если нет - false. Для вычисления используйте рекурсию.
+
+5. Напишите функцию принимающую в качестве параметра число и возвращающую true, если число чётное и false, если число не чётное. Реализуйте функцию тремя разными способами: 1 - при помощи оператора %, 2 - при помощи цикла, 3 - при помощи рекурсии
+
+6. Напишите функцию, создающую функцию по определению чётности числа. Функция создатель `createEvenDetector` должна принимать параметр, указывающий на то, каким образом будут выполнены вычисления: 1 - при помощи оператора %, 2 - при помощи цикла, 3 - при помощи рекурсии. Функция, созданная создателем, должна принимать в качестве параметра число, подлежащее проверке `isEven1(25)` Используйте замыкание.
+Пример использования, функций, которые вы реализуете:
+```javascript
+var isEven1 = createEvenDetector(1);  
+var isEven2 = createEvenDetector(2);
+var isEven3 = createEvenDetector(3);
+
+isEven1(10); // -> true
+isEven2(15); // -> false
+```
 
