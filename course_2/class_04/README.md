@@ -203,3 +203,42 @@ function sayToMan() {
 }
 console.log(sayToMan());
 ```
+
+#### Необязательные параметры (аргументы)
+
+```javascript
+function multiply(a,b) {
+    var result;
+    if (typeof b !== 'undefined') {
+        result = a * b;
+    } else {
+        result = a * a;
+    }
+    return result;
+}
+
+console.log(multiply(5,7));
+console.log(multiply(5));
+```
+
+>35
+25
+
+#### Замыкания
+
+```javascript
+function sumWithNumber(a) {
+    var doAddition = function (b) {
+        return a + b;
+    }
+    return doAddition;
+}
+var sumWith7 = sumWithNumber(7);
+console.log(sumWith7(8));
+console.log(sumWith7(25));
+```
+>15
+32
+
+#### Рекурсия
+
